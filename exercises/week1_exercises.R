@@ -14,36 +14,60 @@
 #### In-class exercises ####
 
 ## Challenge: what does the function ceiling do? What are its main arguments? How did you determine this?
+""" Takes a given number and returns the closest integer, rounding up. It only has one argument, the given number. 
+You can find this out by typing ?ceiling into the Rstudio console and reading the documentation in the help window."""
 
 ## Challenge: what is the value of each item at each step?
 mass <- 47.5            # mass?
+"""47.5"""
 width  <- 122             # width?
+""" 122"""
 mass <- mass * 2.0      # mass?
+"""95"""
 width  <- width - 20        # width?
+"""102"""
 mass_index <- mass/width  # mass_index?
+"""0.931..."""
 
 ## Challenge:
 organs <- c("lung", "prostate", "breast")
 # How many things are in organs?
+"""length(organs) --- 3"""
 # what type of data is organs?
+""" class(organs) --- 'character' """
 # get overview of organs
+"""str(organs) --- chr [1:3] 'lung', 'prostate', '...' """
+
 
 ## Challenge: what happens when each of the objects are created?
 num_char <- c(1, 2, 3, "a")
+  """ they're all strings/character"""
 num_logical <- c(1, 2, 3, TRUE)
+""" all numbers - true becomes a 1 """
 char_logical <- c("a", "b", "c", TRUE)
+""" all strings/character""" 
 tricky <- c(1, 2, 3, "4")
+""" all strings/character"""
 
 ## Challenge: why does the following code return TRUE: 
 "four" > "five"
+"""alphabetically"""
 
 ## Challenge:
 # create vector
 heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
 # remove NAs from heights
+"""heights[!is.na(heights)]"""
 # calculate median of heights
+"""median(heights) --- 64"""
+
 # identify how many elements from more_heights are greater than 67 inches
+"""more_heights <- heights[heights > 67]
+   length(more_heights)
+   6 """
 # visualize data as a histogram (hint: function hist)
+"""hist(heights)"""
+
 
 #### Extra exercises ####
 
