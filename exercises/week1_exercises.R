@@ -73,17 +73,33 @@ heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65,
 
 ## Object manipulation
 # create an object called agge that contains your age in years
+agge <- 32
 # reassign the object to a new object called age (e.g., correct the typo)
+age <- agge
 # remove the previous object from your environment
+rm(agge)
 # calculate your age in days
+age_days <- age*365 + 6 + 30+ 31 + 31 + 10
+
 
 ## Vector manipulation (character data):
 # create a object representing a vector that contains the names of buildings on Fred Hutch's campus: https://www.fredhutch.org/en/contact-us/visit-us.html
+buildings <- c("Arnold", "Eastlake", "Hutchinson", "Seattle Cancer Care Alliance", "Steam Plant", "Thomas", "Weintraub", "Yale")
+
 # add Seattle, Washington to the beginning of the vector, and Steam Plant to the end of the vector
+buildings <- append(buildings, "Seattle, WA", after=0)
+buildings <- append(buildings, "Steam Plant", after=length(buildings))
+
 # subset the vector to show only the building in which you work
+buildings[buildings=='Arnold']
 
 ## Vector manipulation (numerical data):
 # the following vector represents the number of vacation days possessed by various employees
 vacation_days <- c(5, 7, 20, 1, 0, 0, 12, 4, 2, 2, 2, 4, 5, 6, 7, 10, 4)
+
 # how many employees are represented in the vector?
+length(vacation_days)
+"""17"""
 # how many employees have at least one work week's worth of vacation available to them?
+length(vacation_days[vacation_days>=5])
+"""8"""
